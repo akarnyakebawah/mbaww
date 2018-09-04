@@ -1,0 +1,20 @@
+{
+  "name": "twiggsy",
+  "version": "1.0.0",
+  "description": "Twiggsy is a simple tool that let you share a personalized photo frame for your events. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "imageprocessing",
+    "videoprocessing"
+  ],
+  "author": "Bernino Falya",
+  "license": "MIT",
+  "dependencies": {
+    "multer": "^1.3.1",
+    "randomstring": "^1.1.5"
+  }
+}

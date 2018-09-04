@@ -1,0 +1,40 @@
+# Media Files # 
+###############
+*.mp4 
+*.avi 
+
+# Logs and databases # 
+######################
+*.log
+*.sql
+*.sqlite 
+
+# OS generated files #
+######################
+.DS_Store 
+.DS_Store? 
+._* 
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ini file-file apa ya gak tau saya # 
+#####################################
+*.un~
+*.py~
+*.js~
+*.html~
+*.swp
+
+# specific useless file # 
+#########################
+conv_noexport.py
+conv2.py
+conv3.py
+server_noff.js
+server_spawn.js
+
+# module folder # 
+################# 
+/node_modules
