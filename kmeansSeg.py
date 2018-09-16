@@ -15,33 +15,42 @@ while(cap.isOpened()) :
         ret, label, center = cv2.kmeans(Z,K,None,criteria,10,cv2.KMEANS_PP_CENTERS)
 
         center = np.uint8(center)
-        center_reshape = center.reshape((1, K, 3))
 
-        lw = np.array([40,30,60])
-        up = np.array([80,255,255])
+#        lw = np.array([40,30,60])
+#        up = np.array([80,255,255])
 
-#        lw = np.array([36,0,0]) 
-#        up = np.array([70,255,255])
+        num = np.array([np.count_nonzero(label==0), np.count_nonzero(label==1), np.count_nonzero(label==2)])
+        dom_clr = np.argmax(num, axis=0) 
+        center[dom_clr] = np.multiply(center[dom_clr], 0)
 
-        center_reshape_hsv = cv2.cvtColor(center_reshape, cv2.COLOR_BGR2HSV) 
-        center_reshape_hsv_green = cv2.inRange(center_reshape_hsv, lw, up) 
-        center_reshape_hsv_green = center_reshape_hsv_green / 255
-#        print(center_reshape_hsv_green[0][0])
-#        print(center[0])
+        # here we go stupid code 
+        if dom_clr == 0 :
+            center[1] = [255,255,255] 
+            center[2] = [255,255,255] 
+        elif dom_clr == 1 : 
+            center[0] = [255,255,255] 
+            center[2] = [255,255,255] 
+        else: 
+            center[1] = [255,255,255] 
+            center[2] = [255,255,255]
 
-
-        for x in range(0,(K-1)) :
-            center[x] = np.multiply(center[x],center_reshape_hsv_green[0][x])
-        
+        print(num)
         print(center)
 
+
         res = center[label.flatten()] 
-        res2 = res.reshape((frame.shape)) 
+        res = res.reshape((frame.shape)) 
+#        res = cv2.medianBlur(res, 5)
+
+#        kernel = np.ones((15,15), np.float32)/225 
+#        smoothed = cv2.filter2D(res,-1,kernel)
+
+        blur = cv2.GaussianBlur(res, (15,15), 0)
 
 #        print(res2)   
 #        print(center[label.flatten()])
 #        print(res2.shape)
-        cv2.imshow("output", res2) 
+        cv2.imshow("output", blur) 
         if cv2.waitKey(1) & 0XFF == ord('q') :
             break
     else : 
