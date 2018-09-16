@@ -1,0 +1,248 @@
+@font-face {
+    font-family: Circular;
+    src: url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-light.woff2) format('woff2'), url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal
+}
+@font-face {
+    font-family: Circular;
+    src: url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-book.woff2) format('woff2'), url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-book.woff) format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: Circular;
+    src: url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-medium.woff2) format('woff2'), url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal
+}
+@font-face {
+    font-family: Circular;
+    src: url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-bold.woff2) format('woff2'), url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal
+}
+@font-face {
+    font-family: Circular;
+    src: url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-black.woff2) format('woff2'), url(https://sp-bootstrap.global.ssl.fastly.net/8.2.4/fonts/circular-black.woff) format('woff');
+    font-weight: 900;
+    font-style: normal
+}
+* {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+html {
+	background: url("http://178.128.62.110/background.png");
+}
+
+img, canvas {
+	max-width: 100%;
+	height: auto !important;
+	margin: auto;
+}
+canvas {
+	display: inline-block;
+vertical-align: baseline;
+}
+p {
+	font-family: 'Circular Std', sans-serif, serif;
+}
+h1 {
+    max-width: 200px;
+    margin: auto;
+}
+.images-caman-active h1 {
+	max-width: 150px;
+}
+h2 {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-family: 'Circular Std', sans-serif;
+}
+figure {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+#preloader {
+    z-index: 10001;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+#status,
+#statusedit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0px 0px -30px;
+    text-align: center;
+}
+.images-caman {
+	width: 100%;
+	padding: 15px;
+	margin: auto;
+}
+.container {
+	padding: 45px 20px;
+	color: #fff;
+}
+.inner-container {
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
+}
+.logo-1 {
+	max-width: 100%;
+	margin: auto;
+}
+#attachment {
+    display: none;
+}
+.attachment label {
+	font-family: 'Circular Std', sans-serif;
+    border: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 7px 25px;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 50px 0;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color:#000;
+}
+.attachment label:hover {
+	background-color: #fff;
+	color: #000;
+}
+.component {
+	position: relative;
+	height: 700px;
+	width: 700px;
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 400px;
+}
+.text-content {
+    max-width: 350px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 15px;
+}
+.copy-right {
+    max-width: 270px;
+	margin: 60px auto 0;
+	font-size: 12px;
+}
+.red {
+	color: #ED1C24;
+}
+.image-hide, .image-crop {
+	display: none;
+	max-width: 400px;
+	margin: 30px auto 20px;
+	position: relative
+}
+.text-content-2, .new-download {
+	display: none;
+}
+.btn {
+	font-family: 'Circular Std', sans-serif;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+    border: 1px solid #fff;
+    margin: 0 3px;
+    vertical-align: middle;
+    font-size: 14px;
+    letter-spacing: 1.7px;
+    border-radius: 50px;
+}
+.btn-new {
+    padding: 8px 35px;
+    color: #fff;
+
+}
+.btn-download, .btn-crop {
+	background-color: #000;
+	color: #fff;
+  padding: 8px 60px;
+  border: 0px;
+}
+.btn-download:hover, .btn-crop:hover {
+    background-color: #fff;
+    color: #000;
+}
+.btn-crop {
+    margin-top: 30px;
+    width: 90%;
+    padding-top: 12px;
+}
+.btn-new:hover {
+	background-color: #fff;
+	color: #000;
+}
+.new-download {
+    margin-bottom: 20px;
+}
+.jcrop-holder div .jcrop-tracker {
+  	background : url("../images/pigura.png") center center/cover no-repeat;
+}
+.jcrop-holder img {
+  	filter: grayscale(100%);
+}
+@media only screen and (max-width: 440px) {
+	.btn-new {
+    	padding: 8px 16px;
+	}
+	.btn-download {
+		padding: 8px 28px;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.btn-download {
+		padding: 8px 12px;
+	}
+}
+
+.caption{
+	padding: 20px;
+	border-radius: 10px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #ffffff4a;
+	margin-bottom: 20px;
+}
+
+.power {
+	max-width: 90px;
+	margin: 5px;
+}
+
+.heading{
+	font-size: 20px;
+	margin-top:20px;
+	color: #fff;
+	padding: 10px;
+}
+
+.btn-copy, .btn-crop {
+	background-color: #000;
+	color: #fff;
+    padding: 8px 60px;
+    border: none;
+}
+.btn-copy:hover, .btn-crop:hover {
+    background-color: #fff;
+    color: #000;

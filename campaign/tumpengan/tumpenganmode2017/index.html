@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Tumpengan Mode IKJ 2017</title>
+
+    <meta property="og:title" content="Tumpengan Mode IKJ 2017 />
+    <meta property="og:description" content="Tumpengan Mode IKJ 2017" />
+
+    <link rel="stylesheet" href="assets/css/sanitize.css">
+    <link rel="stylesheet" href="assets/css/jquery.Jcrop.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="imagescaman" class="images-caman">
+      <div class="container">
+        <div class="inner-container">
+          <h1>
+            <img src="assets/images/logo.png">
+          </h1>
+          <figure>
+            <img src="assets/images/type.png">
+          </figure>
+          <div>
+            <div class="attachment attachment-1">
+              <label for="attachment">Upload your photo</label>
+              <input type="file" id="attachment" name="attachment" accept="image/*" required="">
+            </div>
+            <div id="result" class="image-hide">
+              <canvas id="uploadimage" width="1600" height="1600"></canvas>
+            </div>
+          </div>
+          <div class="new-download">
+            <a href="" class="btn btn-new">New</a>
+            <a id="download" class="btn btn-download">Download</a>
+            <div class="heading">Caption</div>
+            <p class="caption">I’m proud to be part of #tumpenganmodeikj2017</p>
+            <div id="btn" class="btn btn-copy" data-clipboard-text="I'm proud to be a part of #tumpenganmodeikj2017">Copy to Clipboard</div>
+          </div>
+           <div class="copy-right">
+            Powered by 
+            <a href="https://www.twiggsy.com"><img class="power" src="assets/images/twiggsy-logo.png"> </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/load-image.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/Blob.js"></script>
+    <script src="assets/js/canvas-toBlob.js"></script>
+    <script src="assets/js/jquery.Jcrop.js"></script>
+    <script src="assets/js/FileSaver.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/general.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script>
+    var btn = document.getElementById('btn');
+    var clipboard = new Clipboard(btn);
+      clipboard.on('success', function(e) {
+        console.log(e);
+      });
+      clipboard.on('error', function(e) {
+        console.log(e);
+      });
+    </script>
+  </body>
+</html>
