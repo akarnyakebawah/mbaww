@@ -2,6 +2,7 @@
 ###############
 *.mp4 
 *.avi 
+*.jpg
 
 # Logs and databases # 
 ######################
@@ -38,3 +39,8 @@ server_spawn.js
 # module folder # 
 ################# 
 /node_modules
+/lib
+/bin
+/include
+/.vscode
+
